@@ -1,7 +1,7 @@
 export default function Landing() {
     return (
-        <section id="home" className="bg-main bg-landing px-16 bg-cover h-screen bg-fixed">
-            <div className='mb-20 pt-20 fixed'>
+        <section id="home" className="bg-main bg-landing px-16 bg-cover h-screen bg-fixed snap-start">
+            <div className='mb-20 pt-20'>
                 <div className='text-5xl font-bold pt-20 leading-snug min-w-fit'>
                 <h1>Hello!<br/>
                 <span className='bg-mainHighlight px-4 -ml-4'>I'm Alexandros.</span></h1>
