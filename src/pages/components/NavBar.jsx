@@ -5,7 +5,7 @@ export default function NavBar() {
     return (
         <nav className='flex justify-between px-14 py-5 fixed w-full'>
             <div className='flex gap-5 text-mainHighlight'>
-                <Link href='#about'>ABOUT</Link>
+                <Link className='' href='#about'>ABOUT</Link>
                 <Link href='#work'>WORK</Link>
             </div>
 
