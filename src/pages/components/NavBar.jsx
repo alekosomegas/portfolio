@@ -10,11 +10,17 @@ export default function NavBar() {
             </div>
 
             <div className='flex gap-5'>
-                <Image src='/icons/github-sign.png'   className='invert opacity-80' width={32} height={32} alt='github logo'/>
-                <Image src='/icons/linkedin-logo.png' className='invert opacity-80' width={32} height={32} alt='linkedin logo'/>
+                <Link href="https://github.com/alekosomegas/" rel="noopener noreferrer" target="_blank" >
+                    <Image  src='/icons/github-sign.png'   className='invert opacity-80' width={32} height={32} alt='github logo'/>
+                </Link>
+                <Link href="https://www.linkedin.com/in/alexandros-kangkelidis-552620189" rel="noopener noreferrer" target="_blank">
+                    <Image src='/icons/linkedin-logo.png' className='invert opacity-80' width={32} height={32} alt='linkedin logo'/>
+                </Link>
             </div>
 
-            <button className=' outline-2 outline px-3 text-mainHighlight'>Contact Me</button>
+            <Link href="#contact">
+                <button className=' outline-2 outline px-3 text-mainHighlight'>Contact Me</button>
+            </Link>
 
         </nav>
     )

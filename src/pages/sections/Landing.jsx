@@ -14,7 +14,6 @@ export default function Landing() {
                 </p>
             </div>
             <button className='bg-slate-200 text-black rounded-md font-bold px-8 py-3'>Download my CV</button>
-
         </section>
     )
 }
