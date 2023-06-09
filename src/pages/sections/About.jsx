@@ -1,10 +1,10 @@
-import React, { useRef } from "react"
+import React from "react"
 import { nanoid } from "nanoid"
 
 const sectionsLinks = ["profile", "experience", "skills"]
 
-export default function About() {
-    const sectionLinksRefs = useRef([])
+const About = React.forwardRef(function About(props, ref) {
+    const sectionLinksRefs = React.useRef([])
 
     function switchSelectedHighlightedLink(link) {
         sectionLinksRefs.current.forEach(l => {
@@ -14,7 +14,7 @@ export default function About() {
     }
 
     return (
-        <section id="about" className="bg-secondary h-screen snap-start"
+        <section ref={(el) => ref.current[1] = el} id="about" className="bg-secondary h-screen snap-start"
            onMouseEnter={() => switchSelectedHighlightedLink(sectionLinksRefs.current[0])}>
 
             <div className="grid grid-cols-3 gap-[30%] pt-[20%] px-[20%]">
@@ -82,4 +82,6 @@ export default function About() {
 
         </section>
     )
-}
+})
+
+export default About;

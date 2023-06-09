@@ -1,8 +1,10 @@
 import Footer from '../components/Footer'
+import React from "react"
 
-export default function Contact() {
+const Contact = React.forwardRef(function Contact(props, ref) {
+
     return (
-        <section id="contact" className="bg-secondary h-screen snap-start flex flex-col justify-between">
+        <section ref={(el) => ref.current[3] = el} id="contact" className="bg-secondary h-screen snap-start flex flex-col justify-between">
             
             <div className=''>
 
@@ -13,4 +15,6 @@ export default function Contact() {
             </div>
         </section>
     )
-}
+})
+
+export default Contact;

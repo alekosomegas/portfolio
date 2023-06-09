@@ -17,6 +17,15 @@ module.exports = {
       backgroundImage: {
         'landing' : "url('/images/home_bg.png')"
       },
+      keyframes: {
+        arrow: {
+          '0%': { opacity: 1},
+          '100%': { opacity: 0, transform: 'translate(-10px, -10px)' },
+        }
+      },
+      animation: {
+        'reduce': "arrow 3s infinite"
+      }
     },
   },
   plugins: [],
