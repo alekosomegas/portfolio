@@ -4,7 +4,7 @@ export default function Landing() {
             <div className='mb-20 pt-20'>
                 <div className='text-5xl font-bold pt-20 leading-snug min-w-fit'>
                 <h1>Hello!<br/>
-                <span className='bg-mainHighlight px-4 -ml-4'>I'm Alexandros.</span></h1>
+                <span className='bg-mainHighlight px-4 -ml-4'>{"I'm Alexandros."}</span></h1>
                 <div className='flex flex-wrap'><h2>Web Developer &nbsp;</h2><h2>| Software Engineer</h2></div>
                 </div>
 
@@ -18,6 +18,3 @@ export default function Landing() {
         </section>
     )
 }
-
-
-//className="bg-main bg-landing bg-cover h-screen px-16 "
