@@ -5,7 +5,8 @@ import NavBar from "./components/NavBar"
 export default function RootLayout({
     children,
     title = "Alexandros Kangkelidis Portfolio",
-    description = "Alexandros Kangkelidis Portfolio"}) {
+    description = "Alexandros Kangkelidis Portfolio",
+    index},) {
     return (
         <>
             <Head>
@@ -16,7 +17,7 @@ export default function RootLayout({
             </Head>
 
             <header>
-                <NavBar/>
+                <NavBar index={index}/>
             </header>
 
             {children}

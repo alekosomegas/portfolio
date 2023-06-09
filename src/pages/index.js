@@ -39,14 +39,14 @@ export default function Home() {
 
 
   return (
-    <RootLayout>
+    <RootLayout index={index}>
       <main className='max-h-screen overflow-y-scroll snap snap-y snap-mandatory scroll-smooth'>
-        <ScrollArrow up={true} ref={scrollArrowUpRef} show={showUpArrow}/>
+        <ScrollArrow up={true} ref={scrollArrowUpRef} show={showUpArrow} index={index}/>
         <Landing  ref={sectionsRefs}/>
         <About    ref={sectionsRefs}/>
         <Work     ref={sectionsRefs}/>
         <Contact  ref={sectionsRefs}/>
-        <ScrollArrow ref={scrollArrowRef} show={showDownArrow}/>
+        <ScrollArrow ref={scrollArrowRef} show={showDownArrow} index={index}/>
       </main>
     </RootLayout>
   )

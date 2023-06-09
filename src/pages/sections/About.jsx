@@ -63,7 +63,7 @@ const About = React.forwardRef(function About(props, ref) {
                         <section 
                             onMouseOver={() => switchSelectedHighlightedLink(sectionLinksRefs.current[2])}>
                             <h2 id="skills" 
-                                className="pt-[15rem] -mt-[15rem] text-mainHighlight tracking-wider">Skills</h2>
+                                className="pt-[25rem] -mt-[25rem] text-mainHighlight tracking-wider">Skills</h2>
                             <p>
                                 I am confident self learning 
                             </p>

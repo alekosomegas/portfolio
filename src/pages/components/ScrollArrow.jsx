@@ -21,13 +21,15 @@ const ScrollArrow = React.forwardRef(function ScrollArrow(props, ref) {
                 before:-mx-[5px] 
 
                 @apply w-5 h-5 -ml-2.5 mr-0 -mt-2.5 mb-0 
-                border-l-[none] border-r-2 border-r-[solid] border-t-[none] border-b-2 border-b-[solid] 
-                
+                border-l-[none] border-r-2 border-t-[none] border-b-2 
+                ${props.index === 2 ? "border-b-[black] border-r-[black]" : "border-b-[solid] border-r-[solid]"}
+
                 ${props.up ? "top-[10%]" : "top-[95%]"}  
                 
                 before:content-[''] before:w-3 before:h-3 before:-ml-1 before:mr-0 before:-mt-1 before:mb-0 
-                before:border-l-[none] before:border-r-[solid] before:border-t-[none] before:border-b-[solid] before:border-r before:border-b 
-                
+                before:border-l-[none] before:border-t-[none] before:border-r before:border-b 
+                ${props.index === 2 ? "before:border-r-[black] before:border-b-[black]" : "before:border-r-[solid] before:border-b-[solid]"}
+
                 before:${props.up ? "top-[10%]" : "top-[95%]"}  
                 
                 before:animate-reduce
