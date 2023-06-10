@@ -6,7 +6,8 @@ export default function RootLayout({
     children,
     title = "Alexandros Kangkelidis Portfolio",
     description = "Alexandros Kangkelidis Portfolio",
-    index},) {
+    index,
+    selectedSlide},) {
     return (
         <>
             <Head>
@@ -17,7 +18,7 @@ export default function RootLayout({
             </Head>
 
             <header>
-                <NavBar index={index}/>
+                <NavBar index={index} selectedSlide={selectedSlide}/>
             </header>
 
             {children}

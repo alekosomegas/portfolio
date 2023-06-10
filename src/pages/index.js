@@ -38,13 +38,15 @@ export default function Home() {
   }, [index])
 
 
+  const [selectedSlide, setSelectedSlide] = React.useState(false)
+
   return (
-    <RootLayout index={index}>
+    <RootLayout index={index} selectedSlide={selectedSlide}>
       <main className='max-h-screen overflow-y-scroll snap snap-y snap-mandatory scroll-smooth'>
         <ScrollArrow up={true} ref={scrollArrowUpRef} show={showUpArrow} index={index}/>
         <Landing  ref={sectionsRefs}/>
         <About    ref={sectionsRefs}/>
-        <Work     ref={sectionsRefs}/>
+        <Work     ref={sectionsRefs} selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide}/>
         <Contact  ref={sectionsRefs}/>
         <ScrollArrow ref={scrollArrowRef} show={showDownArrow} index={index}/>
       </main>

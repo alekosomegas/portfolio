@@ -65,3 +65,9 @@ body {
   transition-property: letter-spacing;
   transition-duration: 0.8s;
 }
+
+[class^="keen-slider__slide"],
+[class*="keen-slider__slide"] {
+  display: flex;
+  
+}

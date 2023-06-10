@@ -2,7 +2,7 @@ import React from "react";
 
 const ScrollArrow = React.forwardRef(function ScrollArrow(props, ref) {
     return (
-        <div ref={ref}>
+        <div ref={ref} className="">
             {/* {props.show &&
                 <h5 className={`
                 absolute text-center w-full

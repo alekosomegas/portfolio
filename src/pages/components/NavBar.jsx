@@ -2,10 +2,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function NavBar(props) {
-    console.log(props.index)
     return (
-        <nav className='flex justify-between px-14 py-5 fixed w-full'>
-            <div className={`flex gap-5 font-bold ${props.index === 2 ? "text-black " : "text-mainHighlight"}`}>
+        <nav className='flex z-50 justify-between px-14 py-5 fixed w-full'>
+            <div className={`flex gap-5 font-bold ${props.index === 2 && !props.selectedSlide ? "text-black " : "text-mainHighlight"}`}>
                 <Link className='hover:text-white duration-500' href='#about'>ABOUT</Link>
                 <Link className='hover:text-white duration-500' href='#work'>WORK</Link>
             </div>
@@ -21,7 +20,7 @@ export default function NavBar(props) {
 
             <Link href="#contact">
                 <button className={`border-2 w-[8rem] font-bold px-3
-                 ${props.index === 2 ? "text-black border-black  hover:bg-black hover:text-mainHighlight" :"text-mainHighlight border-mainHighlight  hover:bg-mainHighlight hover:text-white"}
+                 ${props.index === 2 && !props.selectedSlide ? "text-black border-black  hover:bg-black hover:text-mainHighlight" :"text-mainHighlight border-mainHighlight  hover:bg-mainHighlight hover:text-white"}
                     hover:rounded-lg shadow-lg hover:scale-110 duration-500`}
                 >Contact Me</button>
             </Link>

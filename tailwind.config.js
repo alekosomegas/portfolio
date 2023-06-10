@@ -25,7 +25,7 @@ module.exports = {
       },
       animation: {
         'reduce': "arrow 3s infinite"
-      }
+      },
     },
   },
   plugins: [],
