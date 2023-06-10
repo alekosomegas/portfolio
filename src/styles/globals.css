@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: medium;
+
+  @screen sm {
+    font-size: small;
+  }
+
+  @screen md {
+    font-size: medium;
+  }
+  @screen lg {
+    font-size: larger;
+  }
+}
+
 :root {
   --foreground: #ffffff;
   --background: #434a95;
