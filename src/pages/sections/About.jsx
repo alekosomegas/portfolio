@@ -14,7 +14,8 @@ const About = React.forwardRef(function About(props, ref) {
     }
 
     return (
-        <section ref={(el) => ref.current[1] = el} id="about" className="bg-secondary h-screen overflow-hidden snap-start"
+        <section ref={(el) => ref.current[1] = el} id="about" 
+        className="bg-secondary h-screen overflow-hidden snap-start"
            onMouseEnter={() => switchSelectedHighlightedLink(sectionLinksRefs.current[0])}>
 
             <div className="grid grid-cols-3 gap-[30%] pt-[20%] px-[20%]">

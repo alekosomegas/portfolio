@@ -1,5 +1,4 @@
 import React from "react"
-import ScrollArrow from "../components/ScrollArrow";
 
 const Landing = React.forwardRef(function Landing(props, ref) {
     
