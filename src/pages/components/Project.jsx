@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Project(props) {
     return (
@@ -21,7 +22,7 @@ export default function Project(props) {
 
             <div className="h-full self-stretch bg-mainHighlight">
 
-                <img className={`${props.current ? "brightness-50" : "opacity-85"} transition-brightness ease-linear duration-500 h-full object-cover`} src={props.img} alt="project-image"/>
+                <Image fill className={`${props.current ? "brightness-50" : "opacity-85"} transition-brightness ease-linear duration-500 h-full object-cover`} src={props.img} alt="project-image"/>
 
                     <div className={`${!props.current && "opacity-0"} transition-opacity ease-linear duration-500 left-5 absolute z-50 top-[40%] text-black w-[60%] max-md:w-[90%]`}>
                         {props.selectedSlide &&

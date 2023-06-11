@@ -98,7 +98,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
             </div>
 
 
-            <div className='snap-start'>
+            <div className='snap-end'>
                 <div className='bg-main mt-4 md:hidden justify-center flex py-4'>
                     <Social />
                 </div>
