@@ -97,7 +97,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                 </div>
             </form>
             </div>
-            <div className='md:hidden justify-center flex py-10'>
+            <div className='bg-main mt-5 md:hidden justify-center flex py-10'>
                 <Social />
             </div>
 

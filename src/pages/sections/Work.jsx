@@ -22,8 +22,8 @@ const Work = React.forwardRef(function Work(props, ref) {
             drag: !props.selectedSlide,
             slides: {
                 origin: "center",
-                perView: props.selectedSlide ? 1 : width < 500 ? 1.1 : 1.5,
-                spacing: width < 500 ? 10 : 25,
+                perView: props.selectedSlide ? 1 : width < 500 ? 1.2 : 1.5,
+                spacing: width < 500 ? 5 : 25,
 
             },
           slideChanged(slider) {
