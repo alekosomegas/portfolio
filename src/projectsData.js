@@ -26,6 +26,15 @@ const projectsData = [
         gitUrl:"https://github.com/alekosomegas/TaxiApp",
         url: false,
     },
+    {
+        img:"/images/car-driver.png",
+        name:"Maths Attractor",
+        subTitle:"Fleet managemt, booking",
+        title:"Maths Attractor",
+        notes:" Java",
+        gitUrl:"https://github.com/alekosomegas/TaxiApp",
+        url: false,
+    },
 ]
 
 module.exports = projectsData
