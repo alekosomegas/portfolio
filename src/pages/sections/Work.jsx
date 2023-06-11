@@ -2,6 +2,7 @@ import React from "react"
 import Project from "../components/Project";
 import 'keen-slider/keen-slider.min.css'
 import { useKeenSlider } from 'keen-slider/react' // import from 'keen-slider/react.es' for to get an ES module
+import { nanoid } from "nanoid";
 
 const projectsData = require('@/projectsData')
 
@@ -43,7 +44,7 @@ const Work = React.forwardRef(function Work(props, ref) {
 
                     {projectsData.map((project,i) => {
                         return (
-                            <div className={`keen-slider__slide ${props.selectedSlide ? "h-screen w-screen" : ""}`}>
+                            <div key={nanoid()} className={`keen-slider__slide ${props.selectedSlide ? "h-screen w-screen" : ""}`}>
                                 <Project
                                     selectedSlide={props.selectedSlide}
                                     setSelectedSlide={props.setSelectedSlide}
