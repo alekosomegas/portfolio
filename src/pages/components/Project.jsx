@@ -5,7 +5,7 @@ export default function Project(props) {
     return (
         <div className="flex flex-col self-stretch w-full hover:brightness-110 duration-300 .land-cont">
             {!props.selectedSlide &&
-                <div className="text-black font-extrabold text-2xl tracking-wide mb-3">
+                <div className="text-black font-extrabold text-2xl tracking-wide mb-3 z-50">
                     <h2>{props.no}</h2>
                     <h2>{props.name}</h2>
                 </div>
@@ -22,7 +22,7 @@ export default function Project(props) {
 
             <div className="h-full self-stretch bg-mainHighlight">
 
-                <Image fill className={`${props.current ? "brightness-50" : "opacity-85"} transition-brightness ease-linear duration-500 h-full object-cover`} src={props.img} alt="project-image"/>
+                <img className={`${props.current ? "brightness-50" : "opacity-85"} transition-brightness ease-linear duration-500 h-full object-cover`} src={props.img} alt="project-image"/>
 
                     <div className={`${!props.current && "opacity-0"} transition-opacity ease-linear duration-500 left-5 absolute z-50 top-[40%] text-black w-[60%] max-md:w-[90%] land-cont`}>
                         <div>

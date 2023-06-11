@@ -26,7 +26,6 @@ const Work = React.forwardRef(function Work(props, ref) {
                 origin: "center",
                 perView: props.selectedSlide ? 1 : width < 500 ? 1.2 : 1.5,
                 spacing: width < 500 ? 10 : 25,
-
             },
           slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
@@ -49,7 +48,7 @@ const Work = React.forwardRef(function Work(props, ref) {
                                     setSelectedSlide={props.setSelectedSlide}
                                     current={currentSlide === i}
                                     img={project.img}
-                                    no={`0${i+1}.`}
+                                    no={`0${i === 0 ? 1 : projectsData.length -i +1}.`}
                                     name={project.name}
                                     subTitle={project.subTitle}
                                     title={project.title}

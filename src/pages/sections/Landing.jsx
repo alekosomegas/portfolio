@@ -30,12 +30,13 @@ const Landing = React.forwardRef(function Landing(props, ref) {
                 </p>
             </div>
             <div className="flex max-md:justify-center flex-1 items-center pb-8">
-                <button className='bg-main w-[15rem] h-fit text-white font-bold px-8 py-3 border-dashed border-white border-4
+                <a className='bg-main w-[15rem] h-fit text-white text-center font-bold px-8 py-3 border-dashed border-white border-4
                 hover:bg-mainHighlight hover:text-black hover:rounded-md duration-500 hover:border-transparent
                 '
                 onClick={handleDownload}
                 ref={btnRef}
-                >Download my CV</button>
+                download href="/Alexandros_Kangkelidis_CV.pdf"
+                >Download my CV</a>
 
             </div>
 
