@@ -74,6 +74,6 @@ body {
 
 .h-screen {
   height: 100vh;
-  height: calc(100dvh);
+  height: calc(100dvh) !important;
   /* height: calc(var(--vh, 1vh) * 100); */
 }

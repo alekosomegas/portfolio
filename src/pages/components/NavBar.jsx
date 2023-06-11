@@ -3,8 +3,8 @@ import Social from './Social';
 
 export default function NavBar(props) {
     return (
-        <nav className='flex z-50 justify-between px-14 py-5 fixed w-full
-                        max-md:px-5'>
+        <nav className={`flex z-50 justify-between px-14 py-5 fixed w-full
+                        max-md:px-5 ${props.index === 3 && "bg-secondary"}`}>
             <div className={`flex gap-5 font-bold ${props.index === 2 && !props.selectedSlide ? "text-black " : "text-mainHighlight"}`}>
                 <Link className='hover:text-white duration-500' href='#about'>ABOUT</Link>
                 <Link className='hover:text-white duration-500' href='#work'>WORK</Link>

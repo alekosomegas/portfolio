@@ -102,7 +102,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                 <Social />
             </div>
 
-            <div className='snap-start'>
+            <div className='snap-start h-screen'>
                 <Footer key="footer"/>
             </div>
         </section>

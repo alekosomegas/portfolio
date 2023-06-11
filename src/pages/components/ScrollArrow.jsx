@@ -11,7 +11,7 @@ const ScrollArrow = React.forwardRef(function ScrollArrow(props, ref) {
             
             } */}
             {props.show &&
-                <div className={`
+                <div className={` z-50
                 absolute left-[50%] before:absolute before:left-[50%]
                 
                 ${props.up ? "rotate-[225deg]" : "rotate-45"}
