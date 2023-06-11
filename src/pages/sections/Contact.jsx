@@ -97,11 +97,11 @@ const Contact = React.forwardRef(function Contact(props, ref) {
             </form>
             </div>
 
-            <div className='bg-main mt-4 md:hidden justify-center flex py-4'>
-                <Social />
-            </div>
 
             <div className='snap-start'>
+                <div className='bg-main mt-4 md:hidden justify-center flex py-4'>
+                    <Social />
+                </div>
                 <Footer key="footer"/>
 
                 <div className='text-[8px] p-3 bg-secondary flex mzx-md:flex-col'>
@@ -109,7 +109,8 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                 <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Dave Gandy - Flaticon</a>
                 <a href="https://www.flaticon.com/free-icons/internet" title="internet icons">Internet icons created by Freepik - Flaticon</a>                
                 <a href="https://www.flaticon.com/free-icons/eye" title="eye icons">Eye icons created by Gregor Cresnar - Flaticon</a>
-          </div>  </div>
+            </div> 
+           </div>
         </section>
     )
 })
