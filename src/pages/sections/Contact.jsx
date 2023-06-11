@@ -42,7 +42,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
 
             <div className='pr-10 w-1/2 max-md:w-full'>
                 <h3 className="text-secondaryHighlight font-bold mb-2">CONTACT</h3>
-                <p className="mb-8 w-2/3 max-md:w-full">We are here to help and answer any question you might have. We look forward to hearing from you.</p>
+                <p className="mb-8 w-2/3 max-md:w-full">I look forward to hearing from you.</p>
                 <span className='text-mainHighlight'>kangkelidis@gmail.com</span>
             </div>
 
@@ -50,10 +50,10 @@ const Contact = React.forwardRef(function Contact(props, ref) {
             className="text-black w-1/2 p-4 max-md:w-full" action="">
     
                 <div>
-                    <label className="not-sr-only text-secondaryHighlight font-bold" htmlFor="name">Name</label>
+                    <label className="not-sr-only text-secondaryHighlight" htmlFor="name">NAME</label>
                     <input
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    placeholder="Name"
+                    className="w-full rounded-sm border-gray-200 p-3 text-sm my-2"
+                    placeholder=""
                     value={message.name}
                     onChange={newVal => utils.changeSingleStateValue(setMessage, "name", newVal.target.value)}
                     type="text"
@@ -63,10 +63,10 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                 </div>
                 
                 <div>
-                    <label className="not-sr-only text-secondaryHighlight font-bold" htmlFor="email">Email</label>
+                    <label className="not-sr-only text-secondaryHighlight" htmlFor="email">EMAIL</label>
                     <input
-                        className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                        placeholder="Email address"
+                        className="w-full rounded-sm border-gray-200 p-3 text-sm my-2"
+                        placeholder=""
                         value={message.email}
                         onChange={newVal => utils.changeSingleStateValue(setMessage, "email", newVal.target.value)}
                         type="email"
@@ -75,11 +75,10 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                     />
                 </div>
                 <div>
-                    <label className="not-sr-only text-secondaryHighlight font-bold" htmlFor="message">Message</label>
-
+                    <label className="not-sr-only text-secondaryHighlight" htmlFor="message">MESSAGE</label>
                     <textarea
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    placeholder="Message"
+                    className="w-full rounded-sm border-gray-200 p-3 text-sm my-2"
+                    placeholder=""
                     value={message.message}
                     onChange={newVal => utils.changeSingleStateValue(setMessage, "message", newVal.target.value)}
                     rows="4"
@@ -91,7 +90,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                 <div className="mt-2 flex">
                     <button
                     type="submit"
-                    className="w-full rounded-lg bg-mainHighlight px-5 py-3 font-medium text-white sm:w-auto">
+                    className="w-full rounded-sm bg-mainHighlight px-8 py-4 font-medium text-secondaryHighlight uppercase sm:w-auto">
                     Send Message
                     </button>
                 </div>
@@ -102,9 +101,15 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                 <Social />
             </div>
 
-            <div className='snap-start h-screen'>
+            <div className='snap-start'>
                 <Footer key="footer"/>
-            </div>
+
+                <div className='text-[8px] p-3 bg-secondary flex mzx-md:flex-col'>
+                <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Dave Gandy - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/internet" title="internet icons">Internet icons created by Freepik - Flaticon</a>                
+                <a href="https://www.flaticon.com/free-icons/eye" title="eye icons">Eye icons created by Gregor Cresnar - Flaticon</a>
+          </div>  </div>
         </section>
     )
 })

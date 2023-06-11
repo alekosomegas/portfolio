@@ -17,3 +17,7 @@ export function changeSingleStateValue(setter, name, value) {
         }
     })
 }
+
+export async function delay(ms) {
+    await new Promise( res => setTimeout(res, ms) );
+}

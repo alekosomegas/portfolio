@@ -24,9 +24,9 @@ const Landing = React.forwardRef(function Landing(props, ref) {
                 <div className='flex flex-wrap'><h2>Web Developer &nbsp;</h2><h2>| Software Engineer</h2></div>
                 </div>
 
-                <p className=' max-w-screen-sm mt-10'>
-                A few years ago, I wrote a tiny Python script. I thought it would make my work more efficient. It did. On top of that, it opened up a whole new world for me. Ultimately, it inspired me to leave my career in architecture, and pursue my passion for learning and creating beautiful applications.
-                <br/> <span className='text-mainHighlight'>Welcome to my portfolio website!</span>
+                <p className=' max-w-screen-sm mt-10 '>
+                    A self-taught programmer with a background in architecture.
+                <br/><br/> <span className='text-mainHighlight'>Welcome to my portfolio website!</span>
                 </p>
             </div>
             <div className="flex max-md:justify-center flex-1 items-center pb-8">

@@ -1,8 +1,8 @@
-
+import Link from "next/link"
 
 export default function Project(props) {
     return (
-        <div className="flex flex-col self-stretch hover:brightness-110 hover:duration-300">
+        <div className="flex flex-col self-stretch hover:brightness-110 duration-300">
             {!props.selectedSlide &&
                 <div className="text-black font-extrabold text-2xl tracking-wide mb-3">
                     <h2>{props.no}</h2>
@@ -12,7 +12,10 @@ export default function Project(props) {
             {props.selectedSlide && 
             <button 
                 onClick={() => props.setSelectedSlide(false)} 
-                className="font-bold absolute top-20 left-16 z-20">Go back
+                className="font-bold absolute top-20 left-6 z-20 flex flex-row gap-2 items-center
+                            hover:scale-110 duration-500 ">
+                    <svg transform='rotate(180)' fill="white" width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                    Go back
             </button>
             }
 
@@ -20,7 +23,7 @@ export default function Project(props) {
 
                 <img className={`${props.current ? "brightness-50" : "opacity-85"} transition-brightness ease-linear duration-500 h-full object-cover`} src={props.img} alt="project-image"/>
 
-                    <div className={`${!props.current && "opacity-0"} transition-opacity ease-linear duration-500 left-5 absolute z-50 top-[40%] text-black w-[60%]`}>
+                    <div className={`${!props.current && "opacity-0"} transition-opacity ease-linear duration-500 left-5 absolute z-50 top-[40%] text-black w-[60%] max-md:w-[90%]`}>
                         {props.selectedSlide &&
                         <div className="text-mainHighlight font-extrabold text-2xl tracking-wide mb-3">
                             <h2>{props.no}</h2>
@@ -32,19 +35,33 @@ export default function Project(props) {
                         <h1 className="text-white text-4xl font-black">{props.title}</h1>
                         
                         {!props.selectedSlide &&
-                            <div className="mt-20 bg-mainHighlight -ml-5 w-fit px-3 font-bold py-1">
+                            <div className="mt-20 bg-mainHighlight -ml-5 w-fit px-3 font-bold py-1 
+                                hover:scale-110 duration-500 hover:shadow-xl">
                                 <button 
-                                onClick={() => props.setSelectedSlide(true)}>View Project</button>
+                                className="flex flex-row-reverse gap-3 items-center"
+                                onClick={() => props.setSelectedSlide(true)}>
+                                    <svg width="24" height="24"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg>
+                                    View Project</button>
                             </div>
                         }
                         {props.selectedSlide &&
-                        <div>
+                        <div className="">
                             <div className="text-white pt-3">
                                 <p>{props.notes}</p>
                             </div>
-                            <div className="mt-20 flex gap-10 font-bold  ">
-                                <button className="bg-mainHighlight py-1 px-3 ">Visit Site</button>
-                                <button className="bg-mainHighlight py-1 px-3 ">View Code</button>
+                            <div className="mt-10 flex gap-5 font-bold ">
+                                {props.url &&
+                                <Link href={props.url} rel="noopener noreferrer" target="_blank">
+                                    <span className="bg-mainHighlight py-1 px-3 flex gap-2 items-center rounded-sm shadow-lg hover:bg-white duration-700 hover:scale-110 "><img src="/icons/www.png" alt="web-icon" width={16} />
+                                    Visit Site</span>
+                                </Link>
+                                }
+                                <Link  href={props.gitUrl} rel="noopener noreferrer" target="_blank" >
+                                    <span className="bg-mainHighlight py-1 px-3 flex gap-2 items-center rounded-sm shadow-lg hover:bg-white duration-700 hover:scale-110 ">
+                                        <img src="/icons/eye.png" alt="web-icon" width={16}/>
+                                        View Code
+                                    </span>
+                                </Link>
                             </div>
                         </div>
                         }
