@@ -32,7 +32,7 @@ const About = React.forwardRef(function About(props, ref) {
                     )}
                 </div>
 
-                <div className="col-span-2 overflow-y-scroll no-scrollbar max-h-[55vh] flex flex-col text-slate-100">
+                <div className="col-span-2 overflow-y-scroll no-scrollbar max-h-[50dvh] flex flex-col text-slate-100">
                         <section id="profile"
                             onMouseOver={() => switchSelectedHighlightedLink(sectionLinksRefs.current[0])}
                             className="pb-20 flex flex-col gap-6 " >
