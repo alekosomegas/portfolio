@@ -1,6 +1,7 @@
 import Footer from '../components/Footer'
 import React from "react"
 import * as utils from '@/utils';
+import Social from '../components/Social';
 
 const Contact = React.forwardRef(function Contact(props, ref) {
     const [message, setMessage] = React.useState({
@@ -95,6 +96,9 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                     </button>
                 </div>
             </form>
+            </div>
+            <div className='md:hidden justify-center flex py-10'>
+                <Social />
             </div>
 
             <div className='snap-start'>

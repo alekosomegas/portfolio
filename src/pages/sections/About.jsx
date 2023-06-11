@@ -15,11 +15,12 @@ const About = React.forwardRef(function About(props, ref) {
 
     return (
         <section ref={(el) => ref.current[1] = el} id="about" 
-        className="bg-secondary h-screen overflow-hidden snap-start"
+        className="bg-secondary h-screen snap-start"
            onMouseEnter={() => switchSelectedHighlightedLink(sectionLinksRefs.current[0])}>
 
-            <div className="grid grid-cols-3 gap-[30%] pt-[20%] px-[20%]">
-                <div className="text-mainHighlight flex flex-col text-lg">
+            <div className="grid grid-cols-3 gap-20 pt-40 px-[20%]
+            max-md:flex max-md:flex-col max-md:pt-28 max-md:gap-16">
+                <div className="text-mainHighlight flex flex-col text-lg sticky">
                     {sectionsLinks.map((link, i) => 
                         <a 
                         href={`#${link}`} 

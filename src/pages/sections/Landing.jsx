@@ -13,11 +13,11 @@ const Landing = React.forwardRef(function Landing(props, ref) {
     return (
         <section ref={(el) => ref.current[0] = el} id="home" 
         className="flex flex-col bg-main bg-landing px-16 bg-cover h-screen bg-fixed snap-start
-        max-sm:px-10 
-        max-md:text-sm">
-            <div className='mb-20 pt-20 max-md:mb-0'>
+        max-sm:px-10
+        max-md:text-sm ">
+            <div className='pt-20 '>
                 <div className='text-5xl font-bold pt-20 leading-snug min-w-fit
-                 max-md:pt-[10%] max-md:text-4xl max-md:'>
+                 max-md:pt-[10%] max-md:text-4xl'>
                 <h1>Hello!<br/>
                 <span className='bg-mainHighlight px-4 -ml-4'
                 >{"I'm Alexandros."}</span></h1>
