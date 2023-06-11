@@ -12,7 +12,7 @@ const Landing = React.forwardRef(function Landing(props, ref) {
 
     return (
         <section ref={(el) => ref.current[0] = el} id="home" 
-        className="flex flex-col bg-main bg-landing px-16 bg-cover h-screen bg-fixed snap-start
+        className="flex flex-col bg-main bg-landing px-16 bg-cover h-screen bg-fixed snap-start overflow-y-scroll no-scrollbar
         max-sm:px-10
         max-md:text-sm ">
             <div className='pt-20 '>

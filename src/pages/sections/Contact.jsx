@@ -36,9 +36,9 @@ const Contact = React.forwardRef(function Contact(props, ref) {
 
     return (
         <section ref={(el) => ref.current[3] = el} id="contact" 
-        className="bg-secondary h-screen snap-start flex pt-28 flex-col justify-between">
+        className="bg-secondary h-screen snap-start flex pt-28 flex-col justify-between overflow-y-scroll no-scrollbar">
             
-            <div className='flex px-20 gap-10 h-full items-top pt-16 max-md:flex-col max-md:pt-8 max-md:px-8'>
+            <div className='flex px-20 gap-10 h-fit items-top pt-16 max-md:flex-col max-md:pt-6 max-md:px-8'>
 
             <div className='pr-10 w-1/2 max-md:w-full'>
                 <h3 className="text-secondaryHighlight font-bold mb-2">CONTACT</h3>
@@ -48,7 +48,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
 
             <form onSubmit={handleSubmit} 
             className="text-black w-1/2 p-4 max-md:w-full" action="">
-                
+    
                 <div>
                     <label className="not-sr-only text-secondaryHighlight font-bold" htmlFor="name">Name</label>
                     <input
@@ -97,7 +97,8 @@ const Contact = React.forwardRef(function Contact(props, ref) {
                 </div>
             </form>
             </div>
-            <div className='bg-main mt-5 md:hidden justify-center flex py-10'>
+
+            <div className='bg-main mt-4 md:hidden justify-center flex py-10'>
                 <Social />
             </div>
 
