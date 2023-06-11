@@ -10,44 +10,27 @@ const About = React.forwardRef(function About(props, ref) {
 
     const sectionLinksRefs = React.useRef([])
     const [selectedLinkIndx, setSelectedLinkIndx] = React.useState(0)
-    const [entered, setEntered] = React.useState(false)
 
     React.useEffect(() => {
-        switchSelectedHighlightedLink(sectionLinksRefs.current[selectedLinkIndx])
-        entered ?
-        utils.delay(1)
-        :
-        router.push("/")
-    }, [entered, selectedLinkIndx])
-
-    function switchSelectedHighlightedLink(link) {
-        setSelectedLinkIndx(sectionLinksRefs.current.indexOf(link))
         sectionLinksRefs.current.forEach(l => {
-            l === link ? l.className = "selected-sidebar"
-            : l.className = "opacity-70 hover:text-blue-400"
+            sectionLinksRefs.current.indexOf(l) === selectedLinkIndx ? l.className = "selected-sidebar cursor-pointer"
+            : l.className = "opacity-70 hover:text-blue-400 cursor-pointer"
         })
-    }
+    }, [selectedLinkIndx])
 
     function handleClick(linkIndx) {
         setSelectedLinkIndx(linkIndx)
-        sectionLinksRefs.current.forEach(l => {
-            sectionLinksRefs.current.indexOf(l) === linkIndx ? l.className = "selected-sidebar"
-            : l.className = "opacity-70 hover:text-blue-400"
-        })
+
     }
 
     return (
         <section ref={(el) => ref.current[1] = el} id="about" 
-        className="bg-secondary h-screen snap-start overflow-hidden"
-           onMouseEnter={() => setEntered(true)}
-           onMouseLeave={() => setEntered(false)}>
-
+        className="bg-secondary h-screen snap-start overflow-hidden">
             <div className="grid grid-cols-3 gap-20 pt-40 px-[20%]
             max-md:flex max-md:flex-col max-md:pt-28 max-md:gap-16 max-md:px-10">
                 <div className="text-mainHighlight flex flex-col text-lg sticky">
                     {sectionsLinks.map((link, i) => 
-                        <a 
-                        href={`#${link}`} 
+                        <a className={`cursor-pointer ${i === selectedLinkIndx ? "selected-sidebar" : "opacity-70 hover:text-blue-400" }`}
                         key={nanoid()}
                         onClick={() => handleClick(i)}
                         ref={el => sectionLinksRefs.current[i] = el}>
@@ -58,8 +41,7 @@ const About = React.forwardRef(function About(props, ref) {
 
                 <div className="col-span-2 overflow-y-scroll no-scrollbar max-h-[50dvh] flex flex-col text-slate-100">
                         <section id="profile"
-                            onMouseOver={() => switchSelectedHighlightedLink(sectionLinksRefs.current[0])}
-                            className={`z-50 pb-20 flex flex-col gap-6 ${selectedLinkIndx !== 0 && "max-md:hidden"}`} >
+                            className={`flex flex-col gap-6 ${selectedLinkIndx !== 0 && "hidden"}`} >
                             <h2 className="text-mainHighlight tracking-wider">Profile</h2>
                             <p>
                             A few years ago, I wrote a tiny Python script. I thought it would make my work more efficient. It did. On top of that, it opened up a whole new world for me. Ultimately, it inspired me to leave my career in architecture, and pursue my passion for learning and creating beautiful applications.
@@ -70,8 +52,7 @@ const About = React.forwardRef(function About(props, ref) {
                         </section>
 
                         <section id="experience" 
-                            onMouseOver={() => switchSelectedHighlightedLink(sectionLinksRefs.current[1])}
-                            className={`z-50 pb-20 flex flex-col gap-6 ${selectedLinkIndx !== 1 && "max-md:hidden"}`} >                            <h2 className="text-mainHighlight tracking-wider">Experience</h2>
+                            className={`flex flex-col gap-6 ${selectedLinkIndx !== 1 && "hidden"}`} >                            <h2 className="text-mainHighlight tracking-wider">Experience</h2>
                             <p>
                                 I have finished multiple projects in different langueges and frameworks.
                                 I have finished the following courses 
@@ -86,10 +67,9 @@ const About = React.forwardRef(function About(props, ref) {
                         </section>
                         
                         <section 
-                            onMouseOver={() => switchSelectedHighlightedLink(sectionLinksRefs.current[2])}
-                            className={`${selectedLinkIndx !== 2 && "max-md:hidden"} z-1`}>
+                            className={`${selectedLinkIndx !== 2 && "hidden"}`}>
                             <h2 id="skills" 
-                                className={`pt-[25rem] -mt-[25rem] text-mainHighlight tracking-wider`}>Skills</h2>
+                                className={`text-mainHighlight tracking-wider`}>Skills</h2>
                             <p>
                                 I am confident self learning 
                             </p>
