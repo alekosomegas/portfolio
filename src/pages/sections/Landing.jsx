@@ -13,19 +13,19 @@ const Landing = React.forwardRef(function Landing(props, ref) {
     return (
         <section ref={(el) => ref.current[0] = el} id="home" 
         className="flex flex-col bg-main bg-landing px-16 bg-cover h-screen bg-fixed snap-start
-        max-sm:px-10
-        max-md:text-sm ">
-            <div className='pt-20 '>
+        max-sm:px-10 max-md:text-sm
+        land-cont">
+            <div className='pt-20  '>
                 <div className='text-5xl font-bold pt-20 leading-snug min-w-fit
-                 max-md:pt-[10%] max-md:text-4xl'>
+                 max-md:pt-[10%] max-md:text-4xl land-h1 '>
                 <h1>Hello!<br/>
                 <span className='bg-mainHighlight px-4 -ml-4'
                 >{"I'm Alexandros."}</span></h1>
                 <div className='flex flex-wrap'><h2>Web Developer &nbsp;</h2><h2>| Software Engineer</h2></div>
                 </div>
 
-                <p className=' max-w-screen-sm mt-10 '>
-                    A self-taught programmer with a background in architecture.
+                <p className='max-w-screen-sm mt-10 land-text'>
+                    I am a programmer with a background in architecture.
                 <br/><br/> <span className='text-mainHighlight'>Welcome to my portfolio website!</span>
                 </p>
             </div>

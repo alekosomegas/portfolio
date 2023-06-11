@@ -27,7 +27,7 @@ const About = React.forwardRef(function About(props, ref) {
         <section ref={(el) => ref.current[1] = el} id="about" 
         className="bg-secondary h-screen snap-start overflow-hidden">
             <div className="grid grid-cols-3 gap-20 pt-40 px-[20%]
-            max-md:flex max-md:flex-col max-md:pt-28 max-md:gap-16 max-md:px-10">
+            max-md:flex max-md:flex-col max-md:pt-28 max-md:gap-16 max-md:px-10 land-cont">
                 <div className="text-mainHighlight flex flex-col text-lg sticky">
                     {sectionsLinks.map((link, i) => 
                         <a className={`cursor-pointer ${i === selectedLinkIndx ? "selected-sidebar" : "opacity-70 hover:text-blue-400" }`}

@@ -36,7 +36,7 @@ const Contact = React.forwardRef(function Contact(props, ref) {
 
     return (
         <section ref={(el) => ref.current[3] = el} id="contact" 
-        className="bg-secondary h-screen snap-start flex pt-28 flex-col justify-between">
+        className="bg-secondary h-screen snap-start flex pt-28 flex-col justify-between land-text">
             
             <div className='flex px-20 gap-10 items-top pt-16 max-md:flex-col max-md:pt-0 max-md:gap-4 max-md:px-8'>
 
