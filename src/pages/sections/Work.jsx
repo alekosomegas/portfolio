@@ -36,7 +36,7 @@ const Work = React.forwardRef(function Work(props, ref) {
       
     return (
         <section ref={(el) => ref.current[2] = el} id="work" 
-        className="bg-mainHighlight h-screen snap-start flex overflow-y-scroll no-scrollbar">
+        className="bg-mainHighlight h-screen snap-start flex">
                 <div ref={sliderRef} className="keen-slider h-full pt-24 pb-16 self-center">
 
                     <div className={`keen-slider__slide ${props.selectedSlide ? "h-screen w-screen" : ""}`}>
