@@ -97,3 +97,19 @@ body {
     padding-top: 0;
   }
 }
+
+small {
+  font-size: smaller;
+}
+
+li {
+  list-style-type: none;
+  position: relative;  
+}
+li::before {
+  content: '■';
+  position: absolute;
+  left: -1em;         
+  font-size: 1.1em;
+  color: #ffd400;
+}
