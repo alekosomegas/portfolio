@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     port: 465,
     auth: {
       user: "alexandros@kangkelidis.com",
-      pass: process.env.ZOHO_PASS
+      pass: "KwdikosZ21!"
     },
   });
 
@@ -60,14 +60,12 @@ export default async function handler(req, res) {
   await new Promise((resolve, reject) => {
     transporter.sendMail(notificationMailOptions, (error, info) => {
       if (error) {
-        res.status(500).json({ status: "error" })
         return console.error(error);
       }
       console.log(info);
     });
     transporter.sendMail(thankYouMailOptions, (error, info) => {
       if (error) {
-        res.status(500).json({ status: "error" })
         return console.error(error);
       }
       console.log(info);
@@ -75,6 +73,5 @@ export default async function handler(req, res) {
 
   })
   .then(res.status(200).json({ status: "ok" }))
-
 
 }
