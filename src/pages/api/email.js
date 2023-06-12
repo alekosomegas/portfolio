@@ -60,12 +60,14 @@ export default async function handler(req, res) {
   await new Promise((resolve, reject) => {
     transporter.sendMail(notificationMailOptions, (error, info) => {
       if (error) {
+        res.status(500).json({ status: "error" })
         return console.error(error);
       }
       console.log(info);
     });
     transporter.sendMail(thankYouMailOptions, (error, info) => {
       if (error) {
+        res.status(500).json({ status: "error" })
         return console.error(error);
       }
       console.log(info);
