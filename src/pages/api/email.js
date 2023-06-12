@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     port: 465,
     auth: {
       user: "alexandros@kangkelidis.com",
-      pass: "zrutdG6txvWR"
+      pass: process.env.NEXT_PUBLIC_ZOHO_PASS
     },
   });
 
