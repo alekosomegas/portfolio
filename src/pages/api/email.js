@@ -39,7 +39,7 @@ export default async function handler(req, res) {
     port: 465,
     auth: {
       user: "alexandros@kangkelidis.com",
-      pass: "KwdikosZ21!"
+      pass: "zrutdG6txvWR"
     },
   });
 

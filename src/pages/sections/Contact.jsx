@@ -20,9 +20,10 @@ const Contact = React.forwardRef(function Contact(props, ref) {
       method: "POST",
       body: JSON.stringify(message),
     })
-      .then(() => {
+      .then((res) => {
         setIsLoading(false);
         alert("Thank you!");
+        console.log(res);
       })
       .catch((e) => {
         console.log(e);
