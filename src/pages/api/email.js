@@ -43,6 +43,18 @@ export default async function handler(req, res) {
     },
   });
 
+  await new Promise((resolve, reject) => {
+    transporter.verify(function (error, success) {
+        if (error) {
+            console.log(error);
+            reject(error);
+        } else {
+            console.log("Server is ready to take our messages");
+            resolve(success);
+        }
+    });
+});
+
   const notificationMailOptions = {
     from: "alexandros@kangkelidis.com",
     to: "kangkelidis@gmail.com",
@@ -60,18 +72,22 @@ export default async function handler(req, res) {
   await new Promise((resolve, reject) => {
     transporter.sendMail(notificationMailOptions, (error, info) => {
       if (error) {
-        return console.error(error);
+        console.error(error);
+        reject(error);
       }
       console.log(info);
+      resolve(info)
     });
     transporter.sendMail(thankYouMailOptions, (error, info) => {
       if (error) {
-        return console.error(error);
+        console.error(error);
+        reject(error);
       }
       console.log(info);
+      resolve(info)
     });
 
   })
-  .then(res.status(200).json({ status: "ok" }))
+  res.status(200).json({ status: "ok" })
 
 }
