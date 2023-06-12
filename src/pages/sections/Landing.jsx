@@ -1,10 +1,11 @@
 import React from "react";
+import * as utils from "@/utils";
 
 const Landing = React.forwardRef(function Landing(props, ref) {
   const btnRef = React.useRef();
   async function handleDownload() {
     btnRef.current.innerHTML = "Thank you";
-    await new Promise((res) => setTimeout(res, 1000));
+    utils.delay(1000);
     btnRef.current.innerHTML = "Download my CV";
   }
 

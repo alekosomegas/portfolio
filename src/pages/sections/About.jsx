@@ -81,10 +81,7 @@ const About = React.forwardRef(function About(props, ref) {
               scripts that improved the efficiency of my colleagues and by doing
               so I discovered my passion for technology.
             </p>
-            <p>
-              Although I have no working experience in the tech industry, I do
-              have experience with:
-            </p>
+            <p>I have experience with:</p>
             <ul className="px-2 -my-3">
               <li>Working in large and complex projects and teams.</li>
               <li>Dealing with demanding deadlines and clients.</li>
@@ -97,8 +94,8 @@ const About = React.forwardRef(function About(props, ref) {
               </li>
             </ul>
             <p>
-              And I believe that these can be a positive addition to a team in
-              this field.
+              I believe that these can be a positive addition to a team in this
+              field too.
             </p>
           </section>
 
@@ -115,38 +112,40 @@ const About = React.forwardRef(function About(props, ref) {
               units I've completed are:
             </p>
             <table className="text-sm ml-2 table-fixed leading-6">
-              <tr className="hover:text-yellow-100">
-                <td className="py-1 text-sm">
-                  Harvard
-                  <br />
-                  <small>CS50</small>
-                </td>
-                <td className="pb-5">Introduction to Computer Science</td>
-              </tr>
-              <tr className="hover:text-yellow-100">
-                <td className="py-1 text-sm">
-                  Berkeley
-                  <br />
-                  <small>CS61A</small>
-                </td>
-                <td>Structure and Interpretation of Computer Programs</td>
-              </tr>
-              <tr className="hover:text-yellow-100">
-                <td className="py-1 text-sm">
-                  Berkeley
-                  <br />
-                  <small>CS61B</small>
-                </td>
-                <td className="pb-5">Data Structures</td>
-              </tr>
-              <tr className="hover:text-yellow-100">
-                <td className="py-1 text-sm">Udemy</td>
-                <td>OOP in Python</td>
-              </tr>
-              <tr className="hover:text-yellow-100">
-                <td className="py-1 text-sm">The Odin Project</td>
-                <td className="pb-5">Web Developments</td>
-              </tr>
+              <tbody>
+                <tr className="hover:text-yellow-100">
+                  <td className="py-1 text-sm">
+                    Harvard
+                    <br />
+                    <small>CS50</small>
+                  </td>
+                  <td className="pb-5">Introduction to Computer Science</td>
+                </tr>
+                <tr className="hover:text-yellow-100">
+                  <td className="py-1 text-sm">
+                    Berkeley
+                    <br />
+                    <small>CS61A</small>
+                  </td>
+                  <td>Structure and Interpretation of Computer Programs</td>
+                </tr>
+                <tr className="hover:text-yellow-100">
+                  <td className="py-1 text-sm">
+                    Berkeley
+                    <br />
+                    <small>CS61B</small>
+                  </td>
+                  <td className="pb-5">Data Structures</td>
+                </tr>
+                <tr className="hover:text-yellow-100">
+                  <td className="py-1 text-sm">Udemy</td>
+                  <td>OOP in Python</td>
+                </tr>
+                <tr className="hover:text-yellow-100">
+                  <td className="py-1 text-sm">The Odin Project</td>
+                  <td className="pb-5">Web Developments</td>
+                </tr>
+              </tbody>
             </table>
           </section>
 

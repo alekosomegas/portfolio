@@ -24,10 +24,16 @@ module.exports = {
         arrow: {
           '0%': { opacity: 1},
           '100%': { opacity: 0, transform: 'translate(-10px, -10px)' },
+        },
+        mail: {
+          '0%': {opacity: 0, transform: 'translate(-3em, 0em)'},
+          "50%": {opacity: 1, transform: 'translate(0em, -0.5em)'},
+          '100%': {opacity: 0, transform: 'translate(3em, 0)' },
         }
       },
       animation: {
-        'reduce': "arrow 3s infinite"
+        'reduce': "arrow 3s infinite",
+        "send": "mail 3s linear infinite"
       },
     },
   },
