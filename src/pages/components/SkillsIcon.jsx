@@ -10,7 +10,6 @@ export default function SkillsIcon(props) {
         height={64}
         alt={`${props.name}-logo`}
         src={`/icons/skills/${props.name}.png`}
-        key={nanoid()}
       />
 
       <span className="group-hover:opacity-100 opacity-0 duration-1000 text-sm capitalize text-center">

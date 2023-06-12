@@ -167,13 +167,13 @@ const About = React.forwardRef(function About(props, ref) {
             <h4>I have a Strong knowledge of:</h4>
             <div className="flex flex-wrap px-4">
               {skillsNamesStrong.map((skill) => {
-                return <SkillsIcon name={skill} />;
+                return <SkillsIcon key={nanoid()} name={skill} />;
               })}
             </div>
             <h4>I have a Good knowledge of:</h4>
             <div className="flex flex-wrap px-4">
               {skillsNamesGood.map((skill) => {
-                return <SkillsIcon name={skill} />;
+                return <SkillsIcon key={nanoid()} name={skill} />;
               })}
             </div>
           </section>
