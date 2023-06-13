@@ -19,7 +19,7 @@ const Landing = React.forwardRef(function Landing(props, ref) {
     >
       <div className="pt-20  ">
         <div
-          className="text-5xl font-bold pt-20 leading-snug min-w-fit
+          className="text-5xl font-bold pt-20 leading-tight min-w-fit
                  max-md:pt-[10%] max-md:text-4xl land-h1 "
         >
           <h1>

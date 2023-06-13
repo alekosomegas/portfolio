@@ -14,7 +14,7 @@ export default function RootLayout({
         <title key={"title"}>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={description} key="description" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
       </Head>
 
       <header>

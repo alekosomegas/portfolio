@@ -40,7 +40,7 @@ const About = React.forwardRef(function About(props, ref) {
     >
       <div
         className="grid grid-cols-3 gap-20 pt-40 px-[20%]
-            max-md:flex max-md:flex-col max-md:pt-28 max-md:gap-16 max-md:px-10 land-cont"
+            max-md:flex max-md:flex-col max-md:pt-28 max-md:gap-10 max-md:px-10 land-cont"
       >
         <div className="text-mainHighlight flex flex-col text-lg sticky">
           {sectionsLinks.map((link, i) => (
@@ -59,7 +59,7 @@ const About = React.forwardRef(function About(props, ref) {
           ))}
         </div>
 
-        <div className="col-span-2 overflow-y-scroll no-scrollbar max-h-[65dvh] flex flex-col text-slate-100">
+        <div className="col-span-2 overflow-y-scroll no-scrollbar max-h-[60dvh] flex flex-col text-slate-100">
           <section
             id="profile"
             className={`flex flex-col gap-6 ${

@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import RootLayout from "./RootLayout";
 import Landing from "./sections/Landing";
 import About from "./sections/About";
@@ -7,7 +6,12 @@ import Contact from "./sections/Contact";
 import ScrollArrow from "./components/ScrollArrow";
 import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Barlow_Semi_Condensed } from 'next/font/google'
+ 
+const barlow = Barlow_Semi_Condensed({
+  weight: ['400', '700', '900'],
+  subsets: ['latin'],
+})
 
 const sections = ["home", "about", "work", "contact"];
 
@@ -45,7 +49,7 @@ export default function Home() {
 
   return (
     <RootLayout index={index} selectedSlide={selectedSlide}>
-      <main className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory scroll-smooth">
+      <main className={`${barlow.className} max-h-screen overflow-y-scroll snap snap-y snap-mandatory scroll-smooth`}>
         <ScrollArrow
           up={true}
           ref={scrollArrowUpRef}
