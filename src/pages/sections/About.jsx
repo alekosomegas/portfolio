@@ -77,9 +77,10 @@ const About = React.forwardRef(function About(props, ref) {
             <p>
               I worked as an architect and BIM Manager (Building Information
               Model) in the UK for 5 years. I was in charge of coordinating the
-              way we use software across the practice. I developed plug-ins and
-              scripts that improved the efficiency of my colleagues and by doing
-              so I discovered my passion for technology.
+              way we use architectural software across the practice. Offering
+              training and overseeing every project in terms of BIM.
+              Additionally, I developed plug-ins and scripts for the software
+              and by doing so I discovered my passion for technology.
             </p>
             <p>I have experience with:</p>
             <ul className="px-2 -my-3">
@@ -89,7 +90,7 @@ const About = React.forwardRef(function About(props, ref) {
                 Leading a team and being responsible for parts of a project.
               </li>
               <li>
-                Communicating with w wide range of professionals and
+                Communicating with a wide range of professionals and
                 understanding their point of view.
               </li>
             </ul>
