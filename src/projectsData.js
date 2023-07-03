@@ -49,13 +49,13 @@ const projectsData = [
     url: false,
   },
   {
-    name: "Card Game - 2021",
+    name: "Card Game - 2023",
     img: "/images/biriba.png",
-    subTitle: "Java, JavaFX ",
-    title: "An app based on a card game.",
+    subTitle: "Java, LibGDX ",
+    title: "2D card game based on the Greek card game Biriba.",
     notes:
-      "My first attempt to built this was with Python, my aim was to experiment with OPP concepts. This version is the Java implementation.",
-    gitUrl: "https://github.com/alekosomegas/biriba",
+      "Single player mode against 1-3 computer players.",
+    gitUrl: "https://github.com/alekosomegas/biriba3",
     url: false,
   },
 ];
