@@ -58,6 +58,16 @@ const projectsData = [
     gitUrl: "https://github.com/alekosomegas/biriba3",
     url: false,
   },
+  {
+    name: "Taxi management Web App - 2023",
+    img: "/images/web-taxi-app.png",
+    subTitle: "Javascript, Nextjs, React ",
+    title: "WIP. App for taxi company",
+    notes:
+      "",
+    gitUrl: "https://github.com/alekosomegas/cytransolutions",
+    url: false,
+  },
 ];
 
 module.exports = projectsData;
