@@ -36,7 +36,6 @@ const Landing = React.forwardRef(function Landing(props, ref) {
         </div>
 
         <p className="max-w-screen-sm mt-10 land-text">
-          An architect who wants to become a programmer.
           <br />
           <br />{" "}
           <span className="text-mainHighlight">
