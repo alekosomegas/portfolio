@@ -8,6 +8,7 @@ const projectsData = [
       "Real life project for a car rental company. Built using NextJS and React",
     gitUrl: "https://github.com/alekosomegas/allure-rent-car",
     url: "https://www.allure-rent-a-car.com",
+    video: "/videos/allure-rent.mp4"
   },
   {
     name: "Allure Taxi - 2023",

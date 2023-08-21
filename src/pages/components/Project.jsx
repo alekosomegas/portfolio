@@ -14,7 +14,7 @@ export default function Project(props) {
         <button
           onClick={() => props.setSelectedSlide(false)}
           className="font-bold absolute top-20 left-6 z-20 flex flex-row gap-2 items-center
-                            hover:scale-110 duration-500"
+                            hover:scale-110 duration-500 bg-slate-500 p-4 bg-opacity-90 rounded-lg shadow-lg"
         >
           <svg transform="rotate(180)" fill="white" width="24" height="24">
             <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
@@ -24,18 +24,31 @@ export default function Project(props) {
       )}
 
       <div className="h-full self-stretch bg-mainHighlight">
-        <img
-          className={`${
-            props.current ? "brightness-50" : "opacity-85"
-          } transition-brightness ease-linear duration-500 h-full object-cover`}
-          src={props.img}
-          alt="project-image"
-        />
-
+        {props.selectedSlide ? (
+          <div className="pt-[70px] bg-black h-full">
+            <video
+              poster={props.img}
+              muted
+              loop
+              autoPlay
+              src={props.video}
+              type="video/mp4"
+            />
+          </div>
+        ) : (
+          <img
+            className={`${
+              props.current ? "brightness-50" : "opacity-85"
+            } transition-brightness ease-linear duration-500 h-full object-cover`}
+            src={props.img}
+            alt="project-image"
+          />
+        )}
         <div
           className={`${
-            !props.current && "opacity-0"
-          } transition-opacity ease-linear duration-500 left-5 absolute z-50 top-[40%] text-black w-[60%] max-md:w-[90%] land-cont`}
+            !props.current && "opacity-0"} 
+            ${props.selectedSlide && "bg-slate-500 p-4 rounded-lg shadow-lg bg-opacity-20 hover:bg-opacity-90 "} 
+          transition-opacity ease-linear duration-500 left-5 absolute z-50 top-[40%] text-black w-[40%] max-md:w-[90%] land-cont`}
         >
           <div>
             {props.selectedSlide && (

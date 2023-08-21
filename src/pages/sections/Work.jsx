@@ -38,7 +38,7 @@ const Work = React.forwardRef(function Work(props, ref) {
       ref={(el) => (ref.current[2] = el)}
       id="work"
       className="bg-mainHighlight h-screen snap-start flex"
-    >
+    > 
       <div
         ref={sliderRef}
         className={`keen-slider h-full ${
@@ -65,6 +65,7 @@ const Work = React.forwardRef(function Work(props, ref) {
                 notes={project.notes}
                 gitUrl={project.gitUrl}
                 url={project.url}
+                video={project.video}
               />
             </div>
           );
