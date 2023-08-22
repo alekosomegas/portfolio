@@ -1,11 +1,11 @@
 const projectsData = [
   {
-    name: "Auto Allure - 2023",
+    name: "allure-rent-a-car.com - 2023",
     img: "/images/allure-rent.png",
-    subTitle: "www.allure-rent-a-car.com",
+    subTitle: "Javascript, Nextjs, React, Tailwind",
     title: "Car Rental Website",
     notes:
-      "Real life project for a car rental company. Built using NextJS and React",
+      "Real life project for a car rental company. Connects to the API of the car rental management service used by the company, to find available cars, their details and sends booking request.",
     gitUrl: "https://github.com/alekosomegas/allure-rent-car",
     url: "https://www.allure-rent-a-car.com",
     video: "/videos/allure-rent.mp4"
@@ -55,19 +55,21 @@ const projectsData = [
     subTitle: "Java, LibGDX ",
     title: "2D card game based on the Greek card game Biriba.",
     notes:
-      "Single player mode against 1-3 computer players.",
+      "MVC pattern is used to separate the game logic from the UI. To manage the flow of the game every action/event is modeled as a concrete subclass of an abstract event super class. ",
     gitUrl: "https://github.com/alekosomegas/biriba3",
     url: false,
+    video: "/videos/biriba3.mp4"
   },
   {
-    name: "Taxi management Web App - 2023",
+    name: "Taxi Management Web App - 2023",
     img: "/images/web-taxi-app.png",
-    subTitle: "Javascript, Nextjs, React ",
-    title: "WIP. App for taxi company",
+    subTitle: "Javascript, Nextjs, React, Tailwind, MongoDB ",
+    title: "Taxi management and invoice generator",
     notes:
-      "",
+      "A web application that allows taxi companies to manage their bookings and invoices. NextAuth is used for authorization and authentication and MongoDB for database. ",
     gitUrl: "https://github.com/alekosomegas/cytransolutions",
     url: false,
+    video: "/videos/taxi-management.mp4"
   },
 ];
 

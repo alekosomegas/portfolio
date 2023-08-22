@@ -24,7 +24,7 @@ export default function Project(props) {
       )}
 
       <div className="h-full self-stretch bg-mainHighlight">
-        {props.selectedSlide ? (
+        {props.selectedSlide && props.video ? (
           <div className="pt-[70px] bg-black h-full">
             <video
               poster={props.img}
