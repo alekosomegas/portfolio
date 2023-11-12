@@ -71,6 +71,16 @@ const projectsData = [
     url: false,
     video: "/videos/taxi-management.mp4"
   },
+  {
+    name: "Rentwise - 2023",
+    img: "/images/rentwise.png",
+    subTitle: "Javascript, Nextjs, React, Tailwind, MongoDB ",
+    title: "Car Rental and Fleet Management Software",
+    notes:
+      "Implemented the latest next and react features, such as SSR and server actions. Used chadcn and tailwind for creating a responsive UI and clerk for authentication.",
+    gitUrl: "https://github.com/alekosomegas/rentwise",
+    url: false,
+  },
 ];
 
 module.exports = projectsData;

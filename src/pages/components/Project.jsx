@@ -23,9 +23,9 @@ export default function Project(props) {
         </button>
       )}
 
-      <div className="h-full self-stretch bg-mainHighlight">
+      <div className=" bg-mainHighlight">
         {props.selectedSlide && props.video ? (
-          <div className="pt-[70px] bg-black h-full">
+          <div className="pt-[70px] bg-black">
             <video
               poster={props.img}
               muted
@@ -36,12 +36,14 @@ export default function Project(props) {
             />
           </div>
         ) : (
-          <img
+          <Image
             className={`${
               props.current ? "brightness-50" : "opacity-85"
-            } transition-brightness ease-linear duration-500 h-full object-cover`}
+            } transition-brightness ease-linear duration-500 mt-20`}
             src={props.img}
             alt="project-image"
+            fill
+            style={{objectFit: 'cover'}}
           />
         )}
         <div
