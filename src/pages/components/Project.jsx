@@ -49,7 +49,7 @@ export default function Project(props) {
         <div
           className={`${
             !props.current && "opacity-0"} 
-            ${props.selectedSlide && "bg-slate-500 p-4 rounded-lg shadow-lg bg-opacity-20 hover:bg-opacity-90 "} 
+            ${props.selectedSlide && "bg-slate-500 p-4 rounded-lg shadow-lg bg-opacity-20 hover:bg-opacity-90  opacity-20 hover:opacity-100"} 
           transition-opacity ease-linear duration-500 left-5 absolute z-50 top-[40%] text-black w-[40%] max-md:w-[90%] land-cont`}
         >
           <div>

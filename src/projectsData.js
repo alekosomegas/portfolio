@@ -79,7 +79,7 @@ const projectsData = [
     notes:
       "Implemented the latest next and react features, such as SSR and server actions. Used chadcn and tailwind for creating a responsive UI and clerk for authentication.",
     gitUrl: "https://github.com/alekosomegas/rentwise",
-    url: false,
+    url: 'https://rentwise-mu.vercel.app/',
     video: "/videos/rentwise.mp4"
   },
 ];
